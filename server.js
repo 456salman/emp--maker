@@ -1,7 +1,4 @@
-// const inquirer = require("inquirer");
-// const mysql = require("mysql");
-// const cTable = require("console.table");
-// require('dotenv').config();
+
 const inquirer = require('inquirer');
 const mySQL = require('mysql2');
 require('dotenv').config();
@@ -18,8 +15,10 @@ const db = mySQL.createConnection(
     console.log(`Connected to ${process.env.DB_NAME}`)
 );
 function start () {
-    inquirer.prompt({
+    inquirer.prompt([{
     type: 'list',
+    message: 'what will we be doing today',
+    name: 'option',
     choices: [
         'add role',
         'add employee',
@@ -31,10 +30,9 @@ function start () {
         'finish'
 
     ],
-    message: 'what will we be doing today',
-    name: 'option'
+   
     
-    })
+    }])
     .then(function(result){
         console.log('your option:' + result.option);
         switch (result.option){

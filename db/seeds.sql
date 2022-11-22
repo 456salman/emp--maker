@@ -1,18 +1,4 @@
--- INSERT INTO department (name)
--- VALUES  ("Marketing"),
---         ("Finance"),
---         ("Human Resources");
 
-
--- INSERT INTO role (title, salary, department_id)
--- VALUES  ("Lead Marketing Analyst", 80000, 1),
---         ("Junior Marketing Analyst", 45000, 1),
---         ("Lead Accountant", 100000, 2);
-
--- INSERT INTO employee (first_name, last_name, role_id, manager_id)
--- VALUES  ("Lukas", "Wolf", 1, NULL),
---         ("Amaris", "Norman", 2, 1),
---         ("Frida", "Long", 2, 1);
 
 INSERT INTO department (name)
 VALUES ("legal"),
